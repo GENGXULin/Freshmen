@@ -1,0 +1,446 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        /* 地图容器样式 */
+        #map {
+            height: 500px; /* 设置地图高度 */
+            width: 100%; /* 设置地图宽度 */
+            margin-top: 20px; /* 增加间隙 */
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+            .search-box input {
+                flex: 0 0 60%; /* 设置搜索框的长度为60% */
+            }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn-custom {
+            padding: 10px 20px;
+            border-radius: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+            .btn-custom:hover {
+                background-color: #0056b3;
+            }
+
+        .location-list {
+            margin-top: 20px;
+        }
+
+        .route-info {
+            margin-top: 20px;
+        }
+
+        .loading {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
+
+            .loading img {
+                width: 100px;
+                height: 100px;
+            }
+
+        .text-center {
+            text-align: center;
+            margin-top: 20px; /* 增加间隙 */
+        }
+
+        .search-box,
+        .btn-container {
+            margin-top: 20px; /* 增加间隙 */
+        }
+
+        .route-options,
+        .route-info,
+        .location-list {
+            margin-top: 20px; /* 增加间隙 */
+            text-align: left; /* 设置居左对齐 */
+        }
+
+        .custom-section {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-top: 40px; /* 增加间隙 */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+            .custom-section img {
+                max-width: 50%;
+                border-radius: 10px;
+            }
+
+            .custom-section .description {
+                max-width: 40%;
+                text-align: left;
+            }
+
+                .custom-section .description h4 {
+                    font-family: 'Comic Sans MS', cursive, sans-serif;
+                    font-weight: bold;
+                }
+
+        .campus-info {
+            padding: 20px;
+            margin-top: 40px; /* 增加间隙 */
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .campus {
+            flex: 0 0 48%;
+            text-align: left;
+            background-color: #f0f0f0;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+            .campus img {
+                width: 100%;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+
+            .campus h4 {
+                margin-bottom: 10px;
+                text-align: left;
+            }
+
+            .campus p {
+                margin: 0;
+                text-align: left;
+            }
+
+        .how-to-get {
+            margin-top: 40px; /* 增加间隙 */
+        }
+
+        .transport-info {
+            margin-top: 20px;
+        }
+
+            .transport-info h5 {
+                margin-top: 20px;
+            }
+
+            .transport-info ul {
+                list-style: none;
+                padding: 0;
+            }
+
+                .transport-info ul li {
+                    margin-bottom: 10px;
+                }
+
+                    .transport-info ul li::before {
+                        content: '•';
+                        color: #007bff;
+                        font-weight: bold;
+                        display: inline-block;
+                        width: 1em;
+                        margin-left: -1em;
+                    }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7tejF2yJx0wMAIxjDGn38LirrLuLmYPI&libraries=places&callback=initMap" async defer></script>
+    <script>
+        var map;
+        var markers = [];
+        var directionsService;
+        var directionsRenderer;
+        var specificLocation = { lat: 1.29010, lng: 103.85885 }; // 例如，特定位置的经纬度
+        var travelMode = 'DRIVING';
+        var autocomplete;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: specificLocation,
+                zoom: 15 // 可根据需要调整缩放级别
+            });
+
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+
+            // 添加特定位置的标记
+            addMarker(specificLocation, 'PSB Carpark');
+
+            // 初始化自动完成服务
+            var input = document.getElementById('search-input');
+            autocomplete = new google.maps.places.Autocomplete(input);
+            autocomplete.bindTo('bounds', map);
+            autocomplete.addListener('place_changed', onPlaceChanged);
+        }
+
+        function onPlaceChanged() {
+            var place = autocomplete.getPlace();
+            if (!place.geometry) {
+                alert("No details available for input: '" + place.name + "'");
+                return;
+            }
+            map.setCenter(place.geometry.location);
+            map.setZoom(15);
+            addMarker(place.geometry.location, place.name);
+            calculateAndDisplayRoute(place.geometry.location);
+        }
+
+        function addMarker(location, title) {
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: title
+            });
+            markers.push(marker);
+
+            var infowindow = new google.maps.InfoWindow({
+                content: title
+            });
+
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+
+        function searchLocation() {
+            var address = document.getElementById('search-input').value;
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': address }, function (results, status) {
+                if (status === 'OK') {
+                    showLoading();
+                    map.setCenter(results[0].geometry.location);
+                    addMarker(results[0].geometry.location, address);
+                    calculateAndDisplayRoute(results[0].geometry.location);
+                    hideLoading();
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+
+        function showUserLocation() {
+            if (navigator.geolocation) {
+                showLoading();
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    clearMarkers();  // 清除所有标记
+                    var pos = {
+                        lat: position.coords.latitude,
+                        lng: position.coords.longitude
+                    };
+                    map.setCenter(pos);
+                    addMarker(pos, 'Your Location');
+                    calculateAndDisplayRoute(pos);
+                    hideLoading();
+                }, function () {
+                    alert('Error: The Geolocation service failed.');
+                    hideLoading();
+                });
+            } else {
+                alert('Error: Your browser doesn\'t support geolocation.');
+            }
+        }
+
+        function calculateAndDisplayRoute(destination) {
+            var request = {
+                origin: specificLocation,
+                destination: destination,
+                travelMode: travelMode
+            };
+            directionsService.route(request, function (result, status) {
+                if (status == 'OK') {
+                    directionsRenderer.setDirections(result);
+                    displayRouteInfo(result);
+                } else {
+                    alert('Directions request failed due to ' + status);
+                }
+            });
+        }
+
+        function displayRouteInfo(result) {
+            var route = result.routes[0];
+            var summaryPanel = document.getElementById('route-info');
+            summaryPanel.innerHTML = '';
+            // For each route, display summary information.
+            for (var i = 0; i < route.legs.length; i++) {
+                var leg = route.legs[i];
+                summaryPanel.innerHTML += '<b>Route Segment: ' + (i + 1) + '</b><br>';
+                summaryPanel.innerHTML += leg.start_address + ' to ';
+                summaryPanel.innerHTML += leg.end_address + '<br>';
+                summaryPanel.innerHTML += leg.distance.text + '<br><br>';
+
+                if (travelMode === 'TRANSIT') {
+                    for (var j = 0; j < leg.steps.length; j++) {
+                        var step = leg.steps[j];
+                        if (step.travel_mode === 'TRANSIT') {
+                            var transitDetails = step.transit;
+                            summaryPanel.innerHTML += 'Take ' + transitDetails.line.short_name + ' (' + transitDetails.line.name + ') from ';
+                            summaryPanel.innerHTML += transitDetails.departure_stop.name + ' to ';
+                            summaryPanel.innerHTML += transitDetails.arrival_stop.name + '<br>';
+                            summaryPanel.innerHTML += 'Departure at ' + transitDetails.departure_time.text + '<br>';
+                            summaryPanel.innerHTML += 'Arrival at ' + transitDetails.arrival_time.text + '<br><br>';
+                        }
+                    }
+                }
+            }
+        }
+
+        function setTravelMode(mode) {
+            travelMode = mode;
+            if (markers.length > 1) {
+                var destination = markers[markers.length - 1].getPosition(); // 使用最后一个标记作为目的地
+                showLoading();
+                calculateAndDisplayRoute(destination);
+                hideLoading();
+            }
+        }
+
+        function showLoading() {
+            document.querySelector('.loading').style.display = 'block';
+        }
+
+        function hideLoading() {
+            document.querySelector('.loading').style.display = 'none';
+        }
+
+        function locatePostalCode(postalCode) {
+            var geocoder = new google.maps.Geocoder();
+            geocoder.geocode({ 'address': postalCode }, function (results, status) {
+                if (status === 'OK') {
+                    map.setCenter(results[0].geometry.location);
+                    map.setZoom(15);
+                    clearMarkers();
+                    addMarker(results[0].geometry.location, postalCode);
+                    directionsRenderer.set('directions', null); // 清除当前导航路线
+                } else {
+                    alert('Geocode was not successful for the following reason: ' + status);
+                }
+            });
+        }
+
+        function clearMarkers() {
+            for (var i = 0; i < markers.length; i++) {
+                markers[i].setMap(null);
+            }
+            markers = [];
+        }
+    </script>
+</head>
+<body>
+    <div class="container text-center">
+        <h2>Campus Location</h2>
+        <div class="search-box">
+            <input type="text" id="search-input" class="form-control" placeholder="Enter a location or postal code">
+            <button onclick="searchLocation()" class="btn btn-primary ml-2">Search</button>
+        </div>
+        <div class="btn-container">
+            <button onclick="showUserLocation()" class="btn-custom">Show My Location</button>
+            <button onclick="locatePostalCode('039594')" class="btn-custom">Back to Campus</button>
+        </div>
+        <div id="map"></div>
+        <div class="route-options mt-2">
+            <button onclick="setTravelMode('DRIVING')" class="btn btn-outline-primary">Driving</button>
+            <button onclick="setTravelMode('WALKING')" class="btn btn-outline-secondary">Walking</button>
+            <button onclick="setTravelMode('BICYCLING')" class="btn btn-outline-success">Bicycling</button>
+            <button onclick="setTravelMode('TRANSIT')" class="btn btn-outline-info">Transit</button>
+        </div>
+        <div id="route-info" class="route-info"></div>
+    </div>
+
+    <!-- Custom Section -->
+    <div class="container custom-section">
+        <img src="~/images/location/IMG_6250.jpg" alt="Campus Environment">
+        <div class="description">
+            <h4>ENVIRONMENT IN MAIN WING CAMPUS</h4>
+        </div>
+    </div>
+
+    <!-- Campus Info Section -->
+    <div class="container campus-info">
+        <div class="campus">
+            <h4>PSB Main Wing Campus</h4>
+            <img src="~/images/location/psb960b.jpg" alt="PSB Main Wing Campus">
+            <div class="details">
+                <p>Marina Square 6 Raffles Blvd, #03-200</p>
+                <p>Singapore 039594</p>
+            </div>
+        </div>
+        <div class="campus">
+            <h4>PSB STEM Wing Campus</h4>
+            <img src="~/images/location/PSBA_stemcampus.jpg" alt="PSB STEM Wing Campus">
+            <div class="details">
+                <p>Marina Square 6 Raffles Blvd, #04-101/102</p>
+                <p>Singapore 039594</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- How to Get to Campus Section -->
+    <div class="container how-to-get">
+        <h4>How to get to campus?</h4>
+        <p><b>SMRT</b>, and alight at:</p>
+        <ul>
+            <li><b>City Hall MRT Station (NS25 / EW13)</b>: Walk through CityLink Mall to reach Marina Square (turn right and get on the escalator when you see the directional signage indicating Marina Square).</li>
+            <li><b>Esplanade MRT Station (CC3)</b>: Access Marina Square via the basement integrated walkway - Marina Link which is located just next to Esplanade MRT Station.</li>
+            <li><b>Promenade MRT Station (CC4 / DT15)</b>: Walk through Millenia Walk to reach Marina Square (exit from Millenia Walk’s entrance facing Raffles Boulevard and get on the escalator to Level 2).</li>
+        </ul>
+    </div>
+
+    <!-- Transport Info Section -->
+    <div class="container transport-info">
+        <h5> Bus, and alight at</h5>
+        <ul>
+            <li><b>Raffles Avenue (Esplanade Theatre)</b>: 1N, 2N, 3N, 4N, 5N, 6N, 36, 36A, 36B, 56, 70M, 75, 77, 97, 97E, 106, 111, 133, 162M, 171, 195, 195A, 531, 700A, 857, 960, 961C, NR1, NR2, NR5, NR6, NR7, NR8</li>
+            <li><b>Raffles Boulevard (Pan Pacific Singapore)</b>: 36, 36A, 36B, 56, 75, 77, 97, 97E, 106, 107M, 171, 195, 700A, 857, 960, 961C, NR2, NR5, NR7, NR8</li>
+            <li><b>Esplanade Drive (near One Raffles Link)</b>: 10, 57, 70, 128, 162, 196, 531, 700, 850E, 868, 971E, NR2, NR5, NR7, NR8</li>
+            <li><b>Temasek Boulevard (Suntec Convention)</b>: 36, 36B, 70A, 70M, 97, 97E, 106, 111, 133, 162M, 502, 502A, 518, 518A, 531, 700A, 857, 868</li>
+        </ul>
+
+        <h5>Taxi, and alight at</h5>
+        <ul>
+            <li>Taxi Stand: 7-Eleven (#01-206) or NERF (#01-208) at Level 1 along Raffles Boulevard.</li>
+        </ul>
+
+        <h5> Car, and alight at</h5>
+        <ul>
+            <li>Pick-up and Drop-off Point: Near Carl’s Jr. (#01-202) at Level 1 along Raffles Boulevard.</li>
+        </ul>
+    </div>
+
+    <!-- Loading Animation -->
+    <div class="loading">
+        <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading">
+    </div>
+
+    <!-- 引入 jQuery 库 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 引入验证脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

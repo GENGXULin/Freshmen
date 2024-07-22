@@ -1,0 +1,102 @@
+﻿body {
+    font-family: Arial, sans-serif;
+}
+
+.apply-student-card-page {
+    text-align: center;
+    padding: 20px;
+}
+
+.header-section {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.header-section .overlay h1 {
+    color: white;
+    margin: 0;
+}
+
+.content-section {
+    text-align: center;
+    max-width: 800px; /* Ensure consistent width */
+    margin: 0 auto; /* Center the section */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the second image vertically */
+    gap: 20px;
+    margin-bottom: 40px; /* Add some space below the image container */
+}
+
+    .image-container .image-full {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-container .image-original {
+        height: auto;
+        width: auto; /* Maintain the original size of the second image */
+    }
+
+.upload-photo-section {
+    text-align: left;
+    display: inline-block;
+    width: 100%; /* Ensure it matches the width of the first section */
+}
+
+    .upload-photo-section h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .upload-photo-section p {
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .upload-photo-section table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .upload-photo-section td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left; /* Align all text to the left */
+    }
+
+        .upload-photo-section td:first-child {
+            font-weight: bold;
+            width: 200px; /* Ensure consistent width for the first column */
+        }
+
+.required {
+    color: red;
+}
+
+.upload-photo-section button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+    .upload-photo-section button:hover {
+        background-color: #555;
+    }
+
+.notice {
+    margin-top: 40px;
+}
+
+.highlight {
+    font-weight: bold;
+    font-size: 1.1em; /* Adjust the size as needed */
+}

@@ -1,0 +1,62 @@
+﻿@model COMP3851B.Models.User
+
+@{
+    ViewBag.Title = "Profile";
+}
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="~/css/profile.css">
+</head>
+<body>
+    <br />
+    <br />
+    <div class="container">
+        <div class="profile-header">
+            <h2>Account Information</h2>
+        </div>
+
+        <div class="profile-content">
+            <div class="left-panel">
+                <div class="username-section">
+                    <div class="icon">
+                        <img src="~/images/user/default.png" alt="User Icon">
+                    </div>
+                    <div class="username">
+                        <label>Username</label>
+                        <div>@Model.UserName</div>
+                    </div>
+                    <form asp-action="Logout" method="post">
+                        <button type="submit" class="logout-button">Logout</button>
+                    </form>
+                </div>
+                <br />
+                @if (Model.IsAdmin)
+                {
+                    <a href="@Url.Action("AdminPanel", "Admin")" class="admin-link">Admin Panel</a>
+                }
+                else
+                {
+                    <a href="@Url.Action("UserPanel", "User")" class="admin-link">User Panel</a>
+                }
+            </div>
+            <div class="right-panel">
+                <div class="account-info">
+                    <label>Name</label>
+                    <div>@Model.FirstName @Model.LastName</div>
+                    <label>Email</label>
+                    <div>@Model.Email</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 jQuery 库 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 引入验证脚本 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>

@@ -1,0 +1,67 @@
+﻿@page
+@model COMP3851B.Views.Admin.AdminPanelModel
+@{
+    ViewBag.Title = "Admin Permissions";
+}
+
+<div class="permissions-container">
+    <div class="permission-box" onclick="location.href='@Url.Action("FAQsManagement", "Admin")'">
+        <img src="~/images/admin/question.png" alt="Permission 1">
+        <p>FAQs Management</p>
+    </div>
+    <div class="permission-box" onclick="location.href='@Url.Action("UserManagement", "Admin")'">
+        <img src="~/images/admin/content.png" alt="Permission 2">
+        <p>User Management</p>
+    </div>
+
+    <div class="permission-box" onclick="location.href='@Url.Action("AnnouncementsManagement", "Admin")'">
+        <img src="~/images/admin/announce.png" alt="Permission 3">
+        <p>Ann Management</p>
+    </div>
+
+    <div class="permission-box" onclick="location.href='@Url.Action("LogsManagement", "Admin")'">
+        <img src="~/images/admin/log.png" alt="Permission 3">
+        <p>Log</p>
+    </div>
+</div>
+
+<style>
+    .permissions-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align items at the start (top) */
+        height: 100vh;
+        padding-top: 50px; /* Adjust this value to move the boxes up or down */
+    }
+
+    .permission-box {
+        width: 300px; /* Increase the width */
+        height: 350px; /* Increase the height */
+        margin: 50px;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: transform 0.2s;
+    }
+
+        .permission-box img {
+            width: 100%;
+            height: 50%; /* Adjust the height ratio of the image */
+            object-fit: cover;
+        }
+
+        .permission-box p {
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            font-size: 1.4em; /* Increase the font size */
+        }
+
+        .permission-box:hover {
+            transform: scale(1.05);
+        }
+</style>
+
+

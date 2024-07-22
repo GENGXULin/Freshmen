@@ -1,0 +1,511 @@
+﻿@{
+    ViewData["Title"] = "Virtual Campus Tour";
+}
+
+<div id="tour-container">
+    <div class="nav-bg"></div>
+    <div id="tour-info">
+        <h2 id="location-title">Welcome to the Virtual Campus Tour</h2>
+        <p id="location-description">Click on the hotspots to explore different locations on the campus.</p>
+    </div>
+    <div id="tour-viewer-wrapper">
+        <div id="tour-viewer"></div>
+    </div>
+</div>
+
+
+<style>
+
+    body {
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+    }
+
+    .nav-bg {
+        height: 80px; /* 确保与导航栏高度一致 */
+        background-color: #f0f0f0; /* 你可以根据需要设置背景颜色 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: -1; /* 确保在其他内容之上，但低于导航栏 */
+    }
+
+
+    #tour-container {
+        width: 80%;
+        max-width: 1200px;
+        margin: 40px auto;
+        background-color: #ffffff;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top:120px;
+        
+    }
+
+    #tour-info {
+        width: 100%;
+        padding: 30px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-align: center;
+        border-bottom: 1px solid #0056b3;
+    }
+
+        #tour-info h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        #tour-info p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+        }
+
+    #tour-viewer-wrapper {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 aspect ratio */
+        background-color: #000;
+    }
+
+    #tour-viewer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+        #tour-viewer img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+            #tour-viewer img.active {
+                opacity: 1;
+            }
+
+    .hotspot {
+        position: absolute;
+        width: 50px; /* 调整宽度 */
+        height: 50px; /* 调整高度 */
+        background-image: url('/images/tour/IMG.png'); /* 替换为实际箭头图标路径 */
+        background-size: contain;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+        .hotspot:hover {
+            transform: scale(1.2);
+            filter: brightness(1.2);
+        }
+
+        .hotspot:active {
+            transform: scale(1.1);
+            filter: brightness(0.8);
+        }
+
+        .hotspot.up {
+            transform: rotate(0deg);
+        }
+
+        .hotspot.down {
+            transform: rotate(180deg);
+        }
+
+        .hotspot.right {
+            transform: rotate(90deg);
+        }
+
+        .hotspot.left {
+            transform: rotate(270deg);
+        }
+
+        .hotspot.up-right {
+            transform: rotate(45deg);
+        }
+
+        .hotspot.up-left {
+            transform: rotate(-45deg);
+        }
+
+        .hotspot.down-right {
+            transform: rotate(135deg);
+        }
+
+        .hotspot.down-left {
+            transform: rotate(-135deg);
+        }
+
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tourViewer = document.getElementById('tour-viewer');
+        const locationTitle = document.getElementById('location-title');
+        const locationDescription = document.getElementById('location-description');
+
+        const locations = [
+            {
+                // 0
+                title: 'PSB Main Wing Campus',
+                description: 'Welcome to the main entrance of our campus.',
+                image: '@Url.Content("~/images/tour/IMG_6262.jpg")',
+                hotspots: [
+                    { top: '75%', left: '30%', target: 1, direction: 'up-left' },
+                    { top: '75%', left: '45%', target: 3, direction: 'up' }
+                ]
+            },
+            {
+                // 1
+                title: 'Enquiry counter for visitors',
+                description: 'When you step in, you can ask your academic enquiries here such as how to register your face into the gantry system to enter campus at this counter.',
+                image: '@Url.Content("~/images/tour/IMG_6264.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 0, direction: 'down' }
+                ]
+            },
+            {
+                // 2 删
+                title: 'Gantry Entrance',
+                description: 'Students are needed to scan their face in order to enter campus and for attendance purpose.',
+                image: '@Url.Content("~/images/tour/IMG_6263.jpg")',
+                hotspots: [
+                    { top: '50%', left: '70%', target: 3 },
+                    { top: '95%', left: '50%', target: 0 }
+
+                ]
+            },
+            {
+                // 3
+                title: 'Inside campus',
+                description: 'This is is the environment of campus. When you walk in through the gantry, you will see the interior of the school. There is also a staircase leading to the second floor.',
+                image: '@Url.Content("~/images/tour/IMG_6265.jpg")',
+                hotspots: [
+                    { top: '62%', left: '45%', target: 10 }, 
+                    { top: '90%', left: '50%', target: 0, direction: 'down' },
+                    { top: '85%', left: '10%', target: 4, direction: 'left' }
+
+                ]
+            },
+            {
+                // 4
+                title: 'Inside campus',
+                description: 'The Campus Stairway leads to various key areas of Asia\'s Future Academy.This central location features modern design elements and vibrant informational displays, providing students and visitors with a welcoming and engaging environment.',
+                image: '@Url.Content("~/images/tour/IMG_6266.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 3, direction: 'down' },//3
+                    { top: '60%', left: '80%', target: 8, direction: 'up-right' },
+                    { top: '65%', left: '35%', target: 6, direction: 'up-left' },
+                    { top: '60%', left: '65%', target: 5 }
+                ]
+            },
+            {
+                // 5
+                title: 'Staircase',
+                description: 'This is the staircase leading to the second floor. There are more clasees start from \'B\'  such as B07 and 4 Lecture theatres in second floor.',
+                image: '@Url.Content("~/images/tour/IMG_6269.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 4 }, //4
+                    { top: '25%', left: '35%', target: 27 }
+                ]
+            },
+            {
+                // 6
+                title: 'The Hive',
+                description: 'This is a corner that students are able to consult their enquiries and matters related to their academics, enrolment of courses etc.',
+                image: '@Url.Content("~/images/tour/IMG_6270.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 4, direction: 'down' },//4
+                    { top: '85%', left: '10%', target: 7, direction: 'up-left' }
+                ]
+            },
+            {
+                // 7
+                title: 'Campus Corridor',
+                description: 'This well-lit corridor at Asia\'s Future Academy connects various key areas within the campus.The inviting walkway, adorned with informational displays and greenery, leads students and visitors to their destinations efficiently.',
+                image: '@Url.Content("~/images/tour/IMG_6271.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 6, direction: 'down' }//6
+                ]
+            },
+            {
+                // 8
+                title: 'Student Lounge',
+                description: 'The Student Lounge at Asia\'s Future Academy is a vibrant space designed for relaxation and social interaction.With comfortable seating and a dynamic environment, students can unwind, study, or collaborate with peers in this welcoming area.',
+                image: '@Url.Content("~/images/tour/IMG_6273.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 4, direction: 'down' },//4
+                    { top: '50%', left: '95%', target: 9 },
+                    { top: '35%', left: '55%', target: 19 }
+                ]
+            },
+            {
+                // 9
+                title: '9',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6272.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 8 },//8
+                    { top: '80%', left: '10%', target: 14 },
+                    { top: '60%', left: '40%', target: 15 },
+                    { top: '80%', left: '75%', target: 20 }
+                ]
+            },
+            {
+                // 10
+                title: '10',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6275.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 3, direction: 'down' },//3
+                    { top: '67%', left: '40%', target: 11, direction: 'left' }
+                ]
+            },
+            {
+                // 11
+                title: '11',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6276.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 10, direction: 'down' },//10
+                    { top: '60%', left: '52%', target: 13, direction: 'up' },
+                    { top: '70%', left: '58%', target: 12, direction: 'right' }
+                ]
+            },
+            {
+                // 12
+                title: '12',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6277.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 11, direction: 'down' },//11
+                ]
+            },
+            {
+                // 13
+                title: '13',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6278.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 11, direction: 'down' },//11
+                    { top: '60%', left: '50%', target: 16 }
+                ]
+            },
+            {
+                // 14
+                title: '14',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6284.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 9 },//9
+                ]
+            },
+            {
+                // 15
+                title: '15',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6287.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 9 },//9
+                ]
+            },
+            {
+                // 16
+                title: '16',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6310.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 13, direction: 'down' },//13
+                    { top: '80%', left: '90%', target: 17, direction: 'up-right' },
+                    { top: '65%', left: '60%', target: 18 },
+                    { top: '90%', left: '30%', target: 20, direction: 'left' }
+                ]
+            },
+            {
+                // 17
+                title: '17',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6280.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 16, direction: 'down' },//16
+                ]
+            },
+            {
+                // 18
+                title: '18',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6282.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 16, direction: 'down' },//16
+                ]
+            },
+            {
+                // 19  图片需更换
+                title: '19',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6308.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 8 },//8
+                ]
+            },
+            {
+                // 20
+                title: '20',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6311.jpg")',
+                hotspots: [
+                    { top: '90%', left: '50%', target: 9, direction: 'down' },//9
+                    { top: '70%', left: '75%', target: 16, direction: 'up-right' },
+                    { top: '68%', left: '37%', target: 21 }
+                ]
+            },
+            {
+                // 21
+                title: '21',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6312.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 20 },//20
+                    { top: '70%', left: '75%', target: 28 },
+                    { top: '68%', left: '10%', target: 22 }
+                ]
+            },
+            {
+                // 22
+                title: '22',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6313.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 21 },//21
+                    { top: '55%', left: '50%', target: 23 }
+
+                ]
+            },
+            {
+                // 23
+                title: '23',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6314.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 22 },//22
+                    { top: '55%', left: '45%', target: 24 }
+
+                ]
+            },
+            {
+                // 24
+                title: '24',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6315.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 23 },//23
+                    { top: '75%', left: '15%', target: 25 },
+                    { top: '45%', left: '70%', target: 26 }
+
+                ]
+            },
+            {
+                // 25
+                title: '25',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6316.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 24 }//24
+                ]
+            },
+            {
+                // 26
+                title: '26',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6317.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 27 },//27
+                    { top: '65%', left: '25%', target: 24 },
+                    { top: '60%', left: '52%', target: 25 }
+                ]
+            },
+            {
+                // 27
+                title: '27',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6318.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 5 },//5
+                    { top: '75%', left: '10%', target: 26 },
+                    { top: '70%', left: '85%', target: 28 }
+                ]
+            },
+            {
+                // 28
+                title: '28',
+                description: 'The Broadcast Studio at Asia\'s Future Academy is a state- of - the - art facility designed for media production and live broadcasts.With advanced equipment and soundproofing, it provides students with a professional environment to hone their broadcasting and production skills.',
+                image: '@Url.Content("~/images/tour/IMG_6319.jpg")',
+                hotspots: [
+                    { top: '95%', left: '50%', target: 27 },//27
+                    { top: '50%', left: '60%', target: 21 }
+                ]
+            }
+
+
+        ];
+
+        let currentLocation = 0;
+
+        function loadLocation(locationIndex) {
+            const location = locations[locationIndex];
+            currentLocation = locationIndex;
+
+            const newImgElement = document.createElement('img');
+            newImgElement.src = location.image;
+            newImgElement.alt = location.title;
+            newImgElement.classList.add('active');
+
+            locationTitle.textContent = location.title;
+            locationDescription.textContent = location.description;
+
+            const previousImgElement = tourViewer.querySelector('img.active');
+            if (previousImgElement) {
+                previousImgElement.classList.remove('active');
+                previousImgElement.addEventListener('transitionend', () => {
+                    previousImgElement.remove();
+                });
+            }
+
+            tourViewer.appendChild(newImgElement);
+
+            setTimeout(() => {
+                newImgElement.classList.add('active');
+            }, 10);
+
+            const previousHotspots = tourViewer.querySelectorAll('.hotspot');
+            previousHotspots.forEach(hotspot => {
+                hotspot.remove();
+            });
+
+            location.hotspots.forEach(hotspot => {
+                const hotspotElement = document.createElement('div');
+                hotspotElement.className = `hotspot ${hotspot.direction}`;
+                hotspotElement.style.top = hotspot.top;
+                hotspotElement.style.left = hotspot.left;
+                hotspotElement.addEventListener('click', () => {
+                    loadLocation(hotspot.target);
+                });
+                tourViewer.appendChild(hotspotElement);
+            });
+        }
+
+        loadLocation(currentLocation);
+    });
+</script>

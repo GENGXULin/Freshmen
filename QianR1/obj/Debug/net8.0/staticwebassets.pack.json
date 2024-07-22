@@ -1,0 +1,541 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\COMP381B\\QianR1\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\COMP3851B.bundle.scp.css",
+      "PackagePath": "staticwebassets\\COMP3851B.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\css\\FAQs.css",
+      "PackagePath": "staticwebassets\\css\\FAQs.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\css\\Guide.css",
+      "PackagePath": "staticwebassets\\css\\Guide.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\css\\dates.css",
+      "PackagePath": "staticwebassets\\css\\dates.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\css\\docNeed.css",
+      "PackagePath": "staticwebassets\\css\\docNeed.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\css\\freshmen.css",
+      "PackagePath": "staticwebassets\\css\\freshmen.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\css\\homePage.css",
+      "PackagePath": "staticwebassets\\css\\homePage.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\css\\profile.css",
+      "PackagePath": "staticwebassets\\css\\profile.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\HPFirstArea.jpg",
+      "PackagePath": "staticwebassets\\images\\HPFirstArea.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\HPi1.png",
+      "PackagePath": "staticwebassets\\images\\HPi1.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\HPi2.png",
+      "PackagePath": "staticwebassets\\images\\HPi2.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\HPi3.png",
+      "PackagePath": "staticwebassets\\images\\HPi3.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\HPi4.png",
+      "PackagePath": "staticwebassets\\images\\HPi4.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\HPsecondArea.png",
+      "PackagePath": "staticwebassets\\images\\HPsecondArea.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\JTVC.png",
+      "PackagePath": "staticwebassets\\images\\JTVC.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\admin\\announce.png",
+      "PackagePath": "staticwebassets\\images\\admin\\announce.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\admin\\content.png",
+      "PackagePath": "staticwebassets\\images\\admin\\content.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\admin\\log.png",
+      "PackagePath": "staticwebassets\\images\\admin\\log.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\admin\\question.png",
+      "PackagePath": "staticwebassets\\images\\admin\\question.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\gp_student.jpg",
+      "PackagePath": "staticwebassets\\images\\gp_student.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\home_c1.PNG",
+      "PackagePath": "staticwebassets\\images\\home_c1.PNG"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\home_c2.PNG",
+      "PackagePath": "staticwebassets\\images\\home_c2.PNG"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\ico.png",
+      "PackagePath": "staticwebassets\\images\\ico.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\ico2.png",
+      "PackagePath": "staticwebassets\\images\\ico2.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\image 40.png",
+      "PackagePath": "staticwebassets\\images\\image 40.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\justIco.png",
+      "PackagePath": "staticwebassets\\images\\justIco.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\location\\IMG_6250.jpg",
+      "PackagePath": "staticwebassets\\images\\location\\IMG_6250.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\location\\PSBA_stemcampus.jpg",
+      "PackagePath": "staticwebassets\\images\\location\\PSBA_stemcampus.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\location\\bus.jpg",
+      "PackagePath": "staticwebassets\\images\\location\\bus.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\location\\car.jpg",
+      "PackagePath": "staticwebassets\\images\\location\\car.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\location\\psb960b.jpg",
+      "PackagePath": "staticwebassets\\images\\location\\psb960b.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\location\\subway.jpg",
+      "PackagePath": "staticwebassets\\images\\location\\subway.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\location\\taxi.jpg",
+      "PackagePath": "staticwebassets\\images\\location\\taxi.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\photo_guide 1.png",
+      "PackagePath": "staticwebassets\\images\\photo_guide 1.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\se.jpg",
+      "PackagePath": "staticwebassets\\images\\se.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\test.jpg",
+      "PackagePath": "staticwebassets\\images\\test.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG.png",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6262.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6262.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6263.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6263.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6264.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6264.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6265.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6265.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6266.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6266.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6269.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6269.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6270.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6270.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6271.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6271.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6272.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6272.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6273.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6273.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6275.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6275.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6276.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6276.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6277.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6277.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6278.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6278.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6280.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6280.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6282.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6282.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6284.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6284.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6287.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6287.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6308.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6308.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6310.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6310.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6311.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6311.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6312.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6312.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6313.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6313.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6314.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6314.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6315.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6315.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6316.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6316.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6317.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6317.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6318.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6318.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\tour\\IMG_6319.jpg",
+      "PackagePath": "staticwebassets\\images\\tour\\IMG_6319.jpg"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\images\\user\\default.png",
+      "PackagePath": "staticwebassets\\images\\user\\default.png"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\js\\FAQs.js",
+      "PackagePath": "staticwebassets\\js\\FAQs.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\js\\homePage.js",
+      "PackagePath": "staticwebassets\\js\\homePage.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "E:\\COMP381B\\QianR1\\wwwroot\\videos\\PSB.mp4",
+      "PackagePath": "staticwebassets\\videos\\PSB.mp4"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.COMP3851B.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.COMP3851B.props",
+      "PackagePath": "build\\COMP3851B.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.COMP3851B.props",
+      "PackagePath": "buildMultiTargeting\\COMP3851B.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.COMP3851B.props",
+      "PackagePath": "buildTransitive\\COMP3851B.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,365 @@
+﻿/* 页面整体布局 */
+.freshmen-page {
+    min-height: 100vh;
+    display: flex;
+    margin-top: 80px; /* 导航栏下方的间距 */
+    flex-direction: column;
+}
+
+
+.indent {
+    margin-left: 60px; /* Fixed pixel value for indentation */
+}
+
+.indent2 {
+    margin-left: 20px; /* Fixed pixel value for indentation */
+    
+}
+
+.italic {
+    font-style: italic; /* 这是斜体的样式 */
+}
+
+.TDL_title2{
+    margin-top: 8%;
+
+}
+
+
+.TDL_title3 {
+    margin-top: 8%;
+}
+
+    .TDL_title1 h2, .TDL_title2 h2, .TDL_title3 h2 {
+        margin-top: 2%;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333; /* 更深的颜色 */
+        text-decoration: underline; /* 添加下划线 */
+    }
+
+
+.TDL_title1 h3, .TDL_title2 h3, .TDL_title3 h3 {
+    margin-top: 3%;
+    font-size: 16px;
+}
+
+.TDL_title1 p, .TDL_title2 p, .TDL_title3 p {
+    font-size: 12px; /* 基础字体大小 */
+    margin-top: 1%;
+}
+
+    .TDL_title3 p em {
+        font-size: 12px; /* 基础字体大小 */
+    }
+
+    .TDL_title1 ul, .TDL_title2 ul, .TDL_title3 ul {
+        font-size: 12px; /* 比 p 更小的字体大小 */
+        margin-top: 1%;
+    }
+
+    .TDL_title1 ul li, .TDL_title3 ul li {
+        font-size: 12px; /* 比 ul 更小的字体大小 */
+        margin-top: 1%;
+    }
+
+    .TDL_title2 ol li {
+        font-size: 12px; /* 比 ul 更小的字体大小 */
+        margin-bottom: 40px;
+    }
+
+    .TDL_title2 ol{
+        font-size: 12px; /* 比 ul 更小的字体大小 */
+        margin-top: 25px;
+    }
+
+.JTVC-MAP{
+    text-align: center; /* 使图片和文字居中对齐 */
+    margin-top: 20px; /* 在内容下方添加一些空间 */
+}
+
+    .JTVC-MAP img {
+        max-width: 100%; /* 确保图片在容器内自适应宽度 */
+        height: auto; /* 维持图片的宽高比 */
+    }
+
+    .JTVC-MAP p {
+        font-size: 14px; /* 说明文字的字体大小 */
+        margin-top: 10px; /* 在图片和说明文字之间添加一些空间 */
+        font-style: italic; /* 说明文字的字体设置为斜体 */
+    }
+
+
+.vaccination-centres {
+    width: 100%;
+    border-collapse: collapse; /* 合并表格边框 */
+    margin-top: 20px; /* 表格上方的间距 */
+}
+
+    .vaccination-centres th, .vaccination-centres td {
+        border: 1px solid #ddd; /* 表格单元格的边框 */
+        padding: 8px; /* 单元格的内边距 */
+        text-align: left; /* 文本左对齐 */
+    }
+
+    .vaccination-centres th {
+        background-color: #f2f2f2; /* 表头背景颜色 */
+        font-weight: bold; /* 表头字体加粗 */
+    }
+
+
+/* 固定的导航背景 */
+.nav-bg {
+    height: 85px; /* 确保与导航栏高度一致 */
+    background-color: white; /* 你可以根据需要设置背景颜色 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* 确保在其他内容之上，但低于导航栏 */
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: left; /* 使容器内的内容居中对齐 */
+    box-sizing: border-box;
+    padding: 0; /* 确保没有多余的内边距 */
+    margin: 0; /* 居中对齐 */
+    max-width: 100%;
+    margin-top: 3%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+}
+
+    .breadcrumb a {
+        text-decoration: none; /* 取消下划线 */
+        color: inherit; /* 继承父元素的字体颜色 */
+    }
+
+        .breadcrumb a:hover {
+            text-decoration: none; /* 确保在悬停时也不显示下划线 */
+            color: inherit; /* 确保在悬停时颜色不变 */
+        }
+
+
+/* 主容器，包含侧边栏和内容 */
+.container_new2 {
+    display: flex;
+    box-sizing: border-box;
+    padding: 0; /* 确保没有多余的内边距 */
+    margin: 0; /* 居中对齐 */
+    max-width: 100%;
+}
+
+.content {
+    margin-left:-8%;
+    margin-top:1%;
+    width: 100%; /* 占满容器的宽度 */
+    max-width: 1200px; /* 限制最大宽度 */
+    box-sizing: border-box;
+    margin-bottom:4%;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+    justify-content: center;
+    font-size: 1.5em;
+    width: 20%; /* 侧边栏宽度 */
+    background-color: transparent; /* 使侧边栏透明 */
+    padding: 1.5em;
+    margin-right: 10%; /* 侧边栏与内容之间的间隔 */
+    box-sizing: border-box; /* 包括填充和边框在内的宽度计算 */
+    width: 20%; /* 占满中间的比例 */
+}
+
+    /* 侧边栏列表样式 */
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+        .sidebar ul li {
+            margin: 10px 0;
+            position: relative; /* 用于定位左侧边框效果 */
+        }
+
+            .sidebar ul li a {
+                text-decoration: none;
+                color: #333;
+                display: block;
+                padding: 10px;
+                margin: 5px 0; /* 添加边距，使分类项之间有间隔 */
+                border: 1px solid #ccc; /* 添加边框 */
+                border-radius: 10px;
+                transition: background-color 0.3s, box-shadow 0.3s;
+                position: relative; /* 用于定位左侧边框效果 */
+            }
+
+                .sidebar ul li a:hover {
+                    background-color: #e0e0e0;
+                }
+
+                .sidebar ul li a::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 5px; /* 左侧边框宽度 */
+                    height: 100%;
+                    background-color: orange; /* 左侧边框颜色 */
+                    transition: height 0.3s;
+                    height: 0;
+                    border-radius: 10px 0 0 10px;
+                }
+
+                .sidebar ul li a:hover::before {
+                    height: 100%;
+                }
+
+                .sidebar ul li a.active::before {
+                    height: 100%; /* 保持左侧边框在选中状态下的显示 */
+                }
+
+                .sidebar ul li a.active {
+                    color: #000000; /* 选中项的文字颜色 */
+   
+                }
+
+
+/* 主要内容区域样式 */
+
+
+/* 内容区块的显示和隐藏 */
+.content-section {
+    display: none;
+}
+    .content-section h1 {
+        font-weight: bold;
+        font-size: 2em; /* 修改字体大小 */
+        color: #333; /* 修改字体颜色 */
+        margin-bottom: 20px; /* 修改底部边距 */
+    }
+    .content-section.active {
+        display: block;
+    }
+
+/* 内容与箭头的样式 */
+.content-with-arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em; /* 标题与内容之间的间隔 */
+}
+
+/* 图片容器样式 */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+    margin-bottom: 2em;
+    margin-top: 1.5em;
+
+}
+
+    /* 图片样式 */
+    .image-container .image-full {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .image-container .image-original {
+        height: auto;
+        width: auto;
+    }
+
+/* 上传照片区域样式 */
+.upload-photo-section {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    font-size: 20px;
+}
+
+    .upload-photo-section h2 {
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .upload-photo-section p {
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .upload-photo-section table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .upload-photo-section td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+        .upload-photo-section td:first-child {
+            font-weight: bold;
+            width: 200px;
+        }
+
+/* 必填字段样式 */
+.required {
+    color: red;
+}
+
+/* 上传按钮样式 */
+.upload-photo-section button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+    .upload-photo-section button:hover {
+        background-color: #555;
+    }
+
+/* 通知样式 */
+.notice {
+    margin-top: 40px;
+}
+
+/* 高亮样式 */
+.highlight {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container_new2 {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+
+    .image-full, .image-original {
+        margin: 10px 0;
+        width: 100%;
+    }
+}

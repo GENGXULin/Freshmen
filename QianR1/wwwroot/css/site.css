@@ -1,0 +1,95 @@
+/* Initial navbar styles */
+.navbar {
+    font-family: Arial, sans-serif;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+    background-color: rgba(255, 255, 255, 0); /* Initial transparent background */
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+    .navbar.scrolled {
+        background-color: #ffffff; /* Change to opaque */
+        padding: 0.5rem 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    }
+
+/* Other styles */
+.navbar-brand img {
+    height: 80px; /* Increased size initially */
+    transition: height 0.5s ease-in-out, filter 0.5s ease-in-out; /* Smooth transition */
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.9)); /* Add glowing effect */
+}
+
+.navbar.scrolled .navbar-brand img {
+    height: 60px; /* Smaller size after scroll */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* Reduce glowing effect */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: black; /* Initial color */
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 20px; /* Larger font size initially */
+    transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+    .navbar-nav .nav-item .nav-link:hover {
+        font-size: 30px; /* Increase font size on hover */
+        color: green; /* Change font color to green on hover */
+    }
+
+.navbar.scrolled .navbar-nav .nav-item .nav-link {
+    font-size: 20px; /* Smaller font size after scroll */
+    /* Change font color when scrolled */
+}
+
+    .navbar.scrolled .navbar-nav .nav-item .nav-link:hover {
+        font-size: 24px; /* Increase font size on hover when scrolled */
+        /* Change font color to red on hover when scrolled */
+    }
+
+/* Search icon adjustment */
+.navbar-nav .nav-item:last-child {
+    margin-left: auto;
+}
+
+
+
+.banner {
+    display: flex;
+    align-items: center;
+    background-color: #007acc;
+    color: white;
+    padding: 20px;
+    height: 35vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: -17px;
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+}
+
+.text {
+    font-size: 24px;
+    transition: font-size 0.5s ease-in-out; /* Smooth transition for text size */
+}
+
+    .text p {
+        margin: 0;
+        white-space: pre-line;
+        text-align: left;
+    }
+
+.navbar.scrolled .text {
+    font-size: 20px; /* Smaller font size after scroll */
+    color: #333; /* Change text color when scrolled */
+}

@@ -1,0 +1,37 @@
+﻿@model List<COMP3851B.Models.FAQs>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="~/css/FAQs.css">
+    <script src="~/js/homePage.js"></script>
+</head>
+<body>
+    <br />
+    <br />
+
+    <div class="faq-container">
+        <h2>Frequently Asked Questions (FAQs)</h2>
+        <br />
+        <div>
+            @foreach (var faq in Model)
+            {
+                <div class="faq-item">
+                    <button class="accordion">@faq.Question</button>
+                    <div class="panel">
+                        <p>@faq.Answer</p>
+                    </div>
+                </div>
+            }
+        </div>
+        <p class="contact-info">Couldn't find your doubts here?<br>Contact us: freshmenequires@gmail.com</p>
+    </div>
+    <script src="~/js/faqs.js"></script>
+</body>
+</html>
+
+
+
+

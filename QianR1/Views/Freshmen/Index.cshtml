@@ -1,0 +1,308 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<link href="~/css/freshmen.css" rel="stylesheet" />
+
+<div class="nav-bg"></div>
+<div class="freshmen-page">
+    <div class="breadcrumb">
+        <a href="/home/index">Home</a> &gt;
+        <a href="/freshmen/index">Freshmen Guide</a>
+    </div>
+    <div class="container_new2">
+
+        <div class="sidebar">
+            <ul>
+                <li><a href="#" data-target="content1" class="sidebar-link">To-Do-List</a></li>
+                <li><a href="#" data-target="content2" class="sidebar-link">2</a></li>
+                <li><a href="#" data-target="content3" class="sidebar-link">3</a></li>
+                <li><a href="#" data-target="content4" class="sidebar-link">4</a></li>
+                <li><a href="#" data-target="content5" class="sidebar-link">5</a></li>
+                <li><a href="#" data-target="content6" class="sidebar-link">6</a></li>
+                <li><a href="#" data-target="content7" class="sidebar-link">Apply Student Card</a></li>
+            </ul>
+        </div>
+
+
+        <div class="content">
+            <div id="content1" class="content-section">
+                <h1>TO-DO list</h1>
+
+                <div class="TDL_title1">
+                    <h2>1.What you need to do before university starts</h2>
+                    <h3>International Student</h3>
+                    <ul>
+                        <li>IPA Letter</li>
+                        <li>Do medical <a href="#medical-checkup">medical check-up (compulsory)</a>, <a href="#vaccination">vaccination</a> if needed.</li>
+                        <li>Come over to Singapore with IPA letter and arrange for .</li>
+                        <li>In order to collect your STP, you need to wait until your medical result is out.</li>
+                        <li>As a freshman, you may want to visit the environment of the campus! Guidance: <a asp-controller="Tour" asp-action="Index">Campus view</a></li>
+                        <li>Download ‘PSBAccess’ app ,register for PSB Academy Student eCard and upload your profile photo which will be synced to the SmartGantry System. Photo must:</li>
+
+                    </ul>
+
+                    <p class="indent">
+                        1.Show your full face, with facial features clearly visible
+                    </p>
+                    <p class="indent">
+                        2.Not include other faces
+                    </p>
+
+
+
+                    <h3>Domestic Student</h3>
+                    <ul>
+                        <li>Offer Letter</li>
+                        <li>Download ‘PSBAccess’ app, register for PSB Academy Student eCard and upload your profile photo which will be synced to the SmartGantry System. Photo must:</li>
+                    </ul>
+                    <p class="indent">
+                        1.Show your full face, with facial features clearly visible
+                    </p>
+                    <p class="indent">
+                        2.Not include other faces
+                    </p>
+                </div>
+
+                <div class="TDL_title2" id="vaccination">
+                    <h2>2.Vaccination Guide</h2>
+                    <h3>Overseas Vaccination (This is required prior to your STP Collection):</h3>
+                    <ol>
+                        <li>
+                            If your vaccination status in TraceTogether is "Not Vaccinated”, please do a serology test* at any of the clinics listed in: FluGoWhere
+
+                            <p class="indent2">
+                                *A serology test is to confirm that you have undergone effective vaccination and to handle the ingestion/updating of your overseas vaccination
+                                records in the NIR system.
+                            </p>
+                            <p class="indent2 italic">It is chargeable and to be borne by students. Different clinics will charge differently</p>
+                        </li>
+                        <li>If you are "Vaccinated" in TraceTogether and have 2 of the approved vaccines from the WHO-EUL list, please go to JTVC <a href="https://www.vaccine.gov.sg/locations/jtvc/" target="_blank">Joint Testing & Vaccination Centres (Vaccination Wing)</a> to get an additional booster.</li>
+                        <li>
+                            If you are "Vaccinated" in TraceTogether and have 3 of the approved vaccines from the WHO-EUL list:
+                            <p class="indent2">i.If your last dose is more than 4 months, please go to JTVC to get an additional booster.</p>
+                            <p class="indent2">ii.If your last dose is less than 4 months, please do a serology test so that doctor can update your overseas vaccination in NIR system.</p>
+                        </li>
+                        <li>When you have doubt whether additional booster will risk your life, please do a serology test (at any of the clinics listed in: FluGoWhere) so that certified doctor will be able to advice you.</li>
+                    </ol>
+                    <div class="JTVC-MAP">
+                        <img src="~/images/JTVC.png" alt="JTVC">
+                        <p>JTVC shown on google map</p>
+                    </div>
+                    <table class="vaccination-centres">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Address</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>JTVC Jurong East (Former Shuqun Secondary School)</td>
+                                <td>450 Jurong East Street 21 Singapore 609604</td>
+                            </tr>
+                            <tr>
+                                <td>JTVC Kaki Bukit (Former Bedok North Secondary School)</td>
+                                <td>20 Jalan Damai Singapore 419612</td>
+                            </tr>
+                            <tr>
+                                <td>JTVC Bukit Merah (former SEAB Centre)</td>
+                                <td>8 Lower Delta Road Singapore 169198</td>
+                            </tr>
+                            <tr>
+                                <td>JTVC Woodlands (Woodlands Temporary Bus Interchange)</td>
+                                <td>3A Woodlands Square Singapore 737735</td>
+                            </tr>
+                            <tr>
+                                <td>JTVC Sengkang</td>
+                                <td>19A Sengkang Square, Singapore 546911</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>You need to bring these documents:</h3>
+                    <ul>
+                        <li>Passport</li>
+                        <li>IPA Letter</li>
+                        <li>Vaccination certificate</li>
+                        <li>Cash if you are doing serology test (cost can varies depending on the clinic)</li>
+                        <li>Visit <a href="https://gowhere.gov.sg/vaccine">https://gowhere.gov.sg/vaccine</a> for the nearest vaccination sites</li>
+                    </ul>
+                    <p>
+                        Make an appointment at a Public Health Preparedness Clinic (PHPC) through
+                        <a href="https://book.health.gov.sg/covid">https://book.health.gov.sg/covid</a>,
+                        at polyclinics through HealthHub, or walk into any Joint Testing and Vaccination Centre (JTVC).
+                    </p>
+                </div>
+
+                <div class="TDL_title3" id="medical-checkup">
+                    <h2>3.Medical Check-Up</h2>
+                    <p>If you are a new applicant and not in Singapore, the medical examination can either be done in your home country/place or in Singapore by a qualified doctor. However, the medical examination required for subsequent renewal of the Student's Pass must be done in Singapore. The doctor must record and certify the results of the medical examination in the designated medical report form. The medical report should not be issued more than three months from the submission date of your application or renewal.</p>
+                    <p><em>Information above sourced from the ICA website</em></p>
+                    <h3>What you need to bring: (Medical check-up in Singapore)</h3>
+                    <ul>
+                        <li>Your Passport</li>
+                        <li>$35-50 Cash</li>
+                    </ul>
+                    <p>Check your student or registered email for more details. Your instructor will contact you when you reach the scheduled hospital.</p>
+                </div>
+                </div>
+
+
+
+
+
+                <div id="content2" class="content-section">
+                    <h2>xxxxxxxxxxxxxx</h2>
+                    <p>Content for 2 xxxxxxxxxxxxxx...</p>
+                </div>
+                <div id="content3" class="content-section">
+                    <h2>xxxxxxxxxxxxxx</h2>
+                    <p>Content for 3 xxxxxxxxxxxxxx...</p>
+                </div>
+                <div id="content4" class="content-section">
+                    <h2>xxxxxxxxxxxxxx</h2>
+                    <p>Content for 4 xxxxxxxxxxxxxx...</p>
+                </div>
+                <div id="content5" class="content-section">
+                    <h2>xxxxxxxxxxxxxx</h2>
+                    <p>Content for 5 xxxxxxxxxxxxxx...</p>
+                </div>
+                <div id="content6" class="content-section">
+                    <h2>xxxxxxxxxxxxxx</h2>
+                    <p>Content for 6 xxxxxxxxxxxxxx...</p>
+                </div>
+                <div id="content7" class="content-section">
+
+                    <h1>Getting Started to Apply for a Student Card</h1>
+                    <div class="image-container">
+                        <img src="~/images/photo_guide 1.png" alt="Photo Guidelines" class="image-full">
+                        <img src="~/images/image 40.png" alt="Student Card Examples" class="image-original">
+                    </div>
+
+                    @if (Model != null && Model.IsAdmin == false)
+                    {
+                        <form action="/submit" method="post" enctype="multipart/form-data">
+                            <div class="upload-photo-section">
+                                <h2>Upload Your Photo</h2>
+                                <p>If you have any trouble uploading your photo, we can help. Call Student Central on 1300 ASK UON (+61 2 4921 5000).</p>
+                                <table>
+                                    <tr>
+                                        <td>First Name</td>
+                                        <td>@Model.FirstName</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Last Name</td>
+                                        <td>@Model.LastName</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email Address</td>
+                                        <td>@Model.Email</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Student Number</td>
+                                        <td>@Model.StudentNumber</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Pick Up Location <span class="required">*</span></td>
+                                        <td>
+                                            <select name="pickupLocation" required>
+                                                <option value="">-- Select a Location --</option>
+                                                <option value="Singapore">Singapore</option>
+                                                <option value="Australia">Australia</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Upload Photo <span class="required">*</span></td>
+                                        <td>
+                                            <input type="file" name="uploadPhoto" required />
+                                        </td>
+                                    </tr>
+                                </table>
+                                <button type="submit">Submit</button>
+                                <div class="notice">
+                                    Choose "<span class="highlight">Singapore</span>" for your pick-up location.
+                                    You will receive an email from the school site when it is ready!
+                                </div>
+                            </div>
+                        </form>
+                    }
+                    else if (Model != null && Model.IsAdmin == true)
+                    {
+
+                    }
+                    else
+                    {
+                        <!-- 用户未登录，显示提示信息和登录链接 -->
+                        <div class="login-prompt">
+                            <p>You need to <a asp-controller="Account" asp-action="Login">log in first</a> to access this content.</p>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // 移除所有活动状态
+            document.querySelectorAll('.sidebar-link').forEach(link => {
+                link.classList.remove('active');
+            });
+
+            // 添加活动状态
+            this.classList.add('active');
+
+            // 隐藏所有内容部分
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+
+            // 显示目标内容部分
+            const targetId = this.getAttribute('data-target');
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+        const breadcrumb = document.querySelector('.breadcrumb');
+
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // 阻止链接的默认行为
+
+                // 获取当前链接的文本内容
+                const text = this.textContent;
+
+                // 获取当前 breadcrumb 的所有子节点
+                const crumbs = breadcrumb.querySelectorAll('a, span');
+
+                // 确保 breadcrumb 有足够的项来更新第三项
+                if (crumbs.length >= 2) {
+                    // 更新第三个 breadcrumb 项
+                    if (crumbs.length > 2) {
+                        // 移除旧的第三个 breadcrumb 项
+                        crumbs[2].remove();
+                    }
+
+                    // 生成新的 breadcrumb 项
+                    const newCrumb = document.createElement('span');
+                    newCrumb.textContent = ` > ${text}`;
+
+                    // 将新 breadcrumb 项添加到 breadcrumb 中
+                    breadcrumb.appendChild(newCrumb);
+                }
+            });
+        });
+    });
+</script>

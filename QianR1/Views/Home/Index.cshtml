@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="~/css/homePage.css">
+    <script src="~/js/homePage.js"></script>
+</head>
+<body>
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="/videos/PSB.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay-text">
+            <img src="/images/ico2.png" alt="University Logo" class="logo">
+            <div class="text-container">
+                <span class="line1">THE UNIVERSITY OF</span><br>
+                <span class="line2">NEWCASTLE</span><br>
+                <span class="line3">AUSTRALIA(PSB CAMPUS)</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="first-area">
+            <div class="overlay-text2">
+                <div class="text-container2">
+                    <span class="line1">WHY CHOOSE US</span><br>
+                    <div class="text-container3">
+                        <span class="line2">
+                            Our advanced education and research centers make Newcastle, Australia, the ideal location for delivering University of Newcastle degrees in the Southeast Asian region.<br>
+                            <br>Our partnerships with top local institutions ensure high-quality education. With over 1,000 students enrolled in various full-time and part-time degree programs, we invite you to study alongside some of the world's best and become our next success story.
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="second-area">
+            <div class="second-area">
+                <div class="floating-box">
+                    <h2>Prospective Students</h2>
+                    <p>Discover what makes our campus unique and find out how you can be part of our vibrant community. Explore our programs, facilities, and student life.</p>
+                    <a href="#" class="btn btn1">Find Out More</a>
+                </div>
+
+                <div class="floating-box">
+                    <h2>Newly Admitted Students</h2>
+                    <p>Welcome to our university! Get started with essential information to help you settle in and make the most of your first year. Check out our orientation resources and upcoming events.</p>
+                    <a href="@Url.Action("Index", "Freshmen")" class="btn btn2">Find Out More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="third-area">
+        </div>
+
+
+    </div>
+
+</body>
+</html>

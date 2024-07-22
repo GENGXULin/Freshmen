@@ -1,0 +1,107 @@
+﻿.documents-needed-page {
+    font-family: Arial, sans-serif;
+    margin-top: 100px; /* 增加 margin-top 值，确保页面内容从导航栏和.nav-bg容器下方开始 */
+}
+
+.nav-bg {
+    height: 80px;/* 确保与导航栏高度一致 */
+    background-color: #ffffff; /* 你可以根据需要设置背景颜色 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /* 确保在其他内容之上，但低于导航栏 */
+}
+
+.header-section {
+    background-image: url('../images/gp_student.jpg'); /* Replace with your actual image path */
+    background-size: cover;
+    background-position: center;
+    height: 50vh; /* Convert 500px to 50% of viewport height */
+    position: relative;
+    color: white;
+    text-align: center;
+    margin-top: 120px; /* 增加 margin-top 值，确保内容从.nav-bg和导航栏下方开始 */
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.floating-box-container {
+    display: flex;
+    justify-content: center;
+    margin-top: -1%;
+    position: absolute;
+    width: 100%;
+    top: 100%; /* Position the boxes at the bottom of the header section */
+    transform: translateY(-50%); /* Pull the boxes up by 50% of their own height to center them vertically */
+}
+
+.floating-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 1em; /* Convert 10px to em */
+    margin: 0 2%; /* Convert 10px to 2% */
+    padding: 2%; /* Convert 20px to 2% */
+    width: 30%; /* Adjust width as needed */
+    text-align: left;
+    color: black;
+    box-shadow: 0 0.4em 0.8em rgba(0, 0, 0, 0.1); /* Convert 4px and 8px to em units */
+    transition: transform 0.3s; /* Add hover effect */
+    position: relative;
+}
+
+    .floating-box:hover {
+        transform: translateY(-2%); /* Convert 10px to 2% */
+    }
+
+.content-with-arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em; /* Add space between title and content */
+}
+
+.floating-box-link {
+    color: black;
+    font-size: 1.5em; /* Convert 24px to em */
+    text-decoration: none;
+}
+
+.content-section {
+    padding: 2%;
+    margin-top: 15%; /* 增加 margin-top 值，确保内容下移 */
+}
+
+    .content-section h2 {
+        margin-bottom: 2%;
+        text-align: center;
+    }
+
+.document-categories {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+}
+
+.category {
+    background-color: #f8f9fa;
+    border: 0.1em solid #e1e1e1; /* Convert 1px to em */
+    border-radius: 0.5em; /* Convert 5px to em */
+    padding: 2%;
+    width: 40%;
+}
+
+.alert {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.alert-warning {
+    background-color: #ffc107;
+    color: #856404;
+}

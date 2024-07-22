@@ -1,0 +1,40 @@
+﻿
+
+.style1 {
+    max-width: 90%;
+    margin: 20px auto; /* 添加外边距，使其与其他元素分隔 */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table-header {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #f2f2f2;
+    text-align: left;
+}
+
+.table-data {
+    border: 1px solid #ddd;
+    padding: 8px;
+    background-color: #fff;
+    text-align: left;
+}
+
+.last-updated {
+    text-align: right;
+    font-style: italic;
+}
+
