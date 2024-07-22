@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "User Dashboard";
+}
+<div class="nav-bg"></div>
+<div class="securepage">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center mb-4">
+                <h1>Welcome, @ViewBag.Name</h1>
+                <p class="lead">Manage your account and explore our services</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center card-custom">
+                    <div class="card-body">
+                        <img src="~/css/images/cart2.png" alt="Shopping Cart" class="img-fluid mb-3" style="height: 60px;">
+                        <h4 class="card-title">Shopping Cart</h4>
+                        <p class="card-text">View and manage items in your cart</p>
+                        <a asp-controller="Cart" asp-action="Index" class="btn btn-primary">Go to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center card-custom">
+                    <div class="card-body">
+                        <img src="~/css/images/password.png" alt="Change Password" class="img-fluid mb-3" style="height: 60px;">
+                        <h4 class="card-title">Change Password</h4>
+                        <p class="card-text">Update your account password</p>
+                        <a asp-controller="Account" asp-action="ChangePassword" class="btn btn-primary">Change Password</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center card-custom">
+                    <div class="card-body">
+                        <img src="~/css/images/address.png" alt="Address" class="img-fluid mb-3 card-img-custom-large" style="height: 60px;">
+                        <h4 class="card-title">Address</h4>
+                        <p class="card-text">Manage your saved addresses</p>
+                        <a asp-controller="Address" asp-action="Index" class="btn btn-primary">Manage Addresses</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center card-custom">
+                    <div class="card-body">
+                        <img src="~/css/images/order_history.png" alt="Change Password" class="img-fluid mb-3" style="height: 60px;">
+                        <h4 class="card-title">Order History</h4>
+                        <p class="card-text">View your past orders</p>
+                        <a asp-controller="Order" asp-action="OrderHistory" class="btn btn-primary">View Orders</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,53 @@
+﻿@model web.Models.Cart
+
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<div class="nav-bg"></div>
+<div class="cart-index">
+<h1>Shopping Cart</h1>
+
+@if (Model.CartItems != null && Model.CartItems.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.CartItems)
+            {
+                <tr>
+                    <td>@item.Product.Name</td>
+                    <td>@item.Quantity</td>
+                    <td>@item.Price</td>
+                    <td>@(item.Quantity * item.Price)</td>
+                    <td>
+                        <form asp-action="RemoveFromCart" method="post">
+                            <input type="hidden" name="productId" value="@item.ProductID" />
+                            <button type="submit" class="btn btn-danger">Remove</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <p>Total: @Model.CartItems.Sum(i => i.Quantity * i.Price)</p>
+
+    <form asp-controller="Order" asp-action="Checkout" method="get">
+        <button type="submit" class="btn btn-success">Check Out</button>
+        <a asp-controller="Product" asp-action="Inventory" class="btn btn-primary">Continue Shopping</a>
+    </form>
+}
+else
+{
+    <p>Your cart is empty.</p>
+}
+</div>

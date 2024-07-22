@@ -1,0 +1,46 @@
+﻿@model web.Models.Address
+
+@{
+    ViewData["Title"] = "Edit Address";
+}
+
+<h2>Edit Address</h2>
+
+<form asp-action="Edit">
+    <div class="form-group">
+        <label asp-for="Recipient" class="control-label"></label>
+        <input asp-for="Recipient" class="form-control" />
+        <span asp-validation-for="Recipient" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Street" class="control-label"></label>
+        <input asp-for="Street" class="form-control" />
+        <span asp-validation-for="Street" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="City" class="control-label"></label>
+        <input asp-for="City" class="form-control" />
+        <span asp-validation-for="City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="State" class="control-label"></label>
+        <input asp-for="State" class="form-control" />
+        <span asp-validation-for="State" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PostCode" class="control-label"></label>
+        <input asp-for="PostCode" class="form-control" />
+        <span asp-validation-for="PostCode" class="text-danger"></span>
+    </div>
+
+
+    <input type="hidden" asp-for="UserName" value="@User.Identity.Name" />
+
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+
+</form>
+
+<a asp-action="Index">Back to List</a>

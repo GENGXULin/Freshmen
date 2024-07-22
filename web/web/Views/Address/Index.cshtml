@@ -1,0 +1,52 @@
+﻿@model IEnumerable<web.Models.Address>
+
+@{
+    ViewData["Title"] = "My Addresses";
+}
+
+<h2>My Addresses</h2>
+
+<a asp-controller="Address" asp-action="Add" class="btn btn-primary">Add Address</a>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Address</th>
+            <th>State</th>
+            <th>Actions</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var address in Model)
+        {
+            <tr>
+
+                <td>
+                    @address.Recipient  @address.Street  @address.City @address.State, @address.PostCode
+
+                </td>
+                <td>
+                    @if (address.isDefault)
+                    {
+                        <span style="color: green; font-weight: bold;">Default</span>
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", new { id = address.Id })" class="btn btn-primary">Edit</a>
+                    <form asp-controller="Address" asp-action="Delete" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@address.Id" />
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                    @if (!address.isDefault)
+                    {
+                        <form asp-controller="Address" asp-action="SetDefault" method="post" class="d-inline">
+                            <input type="hidden" name="id" value="@address.Id" />
+                            <button type="submit" class="btn btn-secondary">Set as Default</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

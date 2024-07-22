@@ -1,0 +1,49 @@
+﻿<h4>Admin Page</h4>
+
+
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12 text-center mb-4">
+            <h1>Welcome, @ViewBag.Name</h1>
+            <p class="lead">Here is all your right>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center card-custom">
+                <div class="card-body">
+                    <img src="~/css/images/account_mana.png" alt="Shopping Cart" class="img-fluid mb-3" style="height: 60px;">
+                    <h4 class="card-title">Account Management</h4>
+                    <p class="card-text">View and manage account</p>
+                    <a asp-controller="Account" asp-action="ManageAccounts" class="btn btn-primary">Go to manage</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-center card-custom">
+                <div class="card-body">
+                    <img src="~/css/images/password.png" alt="Change Password" class="img-fluid mb-3" style="height: 60px;">
+                    <h4 class="card-title">Change Password</h4>
+                    <p class="card-text">Update your account password</p>
+                    <a asp-controller="Account" asp-action="ChangePassword" class="btn btn-primary">Change Password</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card text-center card-custom">
+                <div class="card-body">
+                    <img src="~/css/images/add_item.png" alt="Change Password" class="img-fluid mb-3 card-img-custom-small " style="height: 60px;">
+                    <h4 class="card-title">Create New Product</h4>
+                    <p class="card-text">Update the product</p>
+                    <a asp-controller="Product" asp-action="CreateEdit" class="btn btn-primary">Update item</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

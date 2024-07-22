@@ -1,0 +1,255 @@
+/* Initial navbar styles */
+
+.nvg-bg{
+    height: 80px;/* 确保与导航栏高度一致 */
+    background-color: #ffffff; /* 你可以根据需要设置背景颜色 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* 确保在其他内容之上，但低于导航栏 */
+}
+
+.first-area_home_index {
+    width: 100%;
+    height: 100vh; /* 占据全页面高度 */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* 垂直排列子元素 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+    .first-area_home_index h1{
+        margin-bottom: 20px; /* 标题和段落之间的空间 */
+    }
+
+
+.account-login {
+    margin-top: 100px;
+}
+
+.account-register {
+    margin-top: 100px;
+}
+
+
+.product-inventory {
+    margin-top: 100px;
+}
+
+.securepage {
+    margin-top:100px;
+}
+
+.cart-index {
+    margin-top:100px;
+}
+
+.genre-navigation {
+    margin-bottom: 15px;
+}
+
+    .genre-navigation a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: dodgerblue; /* 默认未选中时的颜色 */
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .genre-navigation a.selected, .subgenre-navigation a.selected {
+            text-decoration: underline;
+            color: black
+        }
+
+        .genre-navigation a.link:hover, .subgenre-navigation a.link:hover {
+            background-color: lightblue; /* 悬停时的背景色 */
+            color: darkblue; /* 悬停时的文字颜色 */
+        }
+
+.subgenre-navigation {
+    margin-bottom: 15px;
+}
+
+    .subgenre-navigation a {
+        text-decoration: none;
+        color: dodgerblue; /* 默认未选中时的颜色 */
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        text-align: center;
+        white-space: nowrap; /* 防止文本换行 */
+    }
+
+.subgenre-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* 控制间距 */
+    justify-content: flex-start; /* 从左到右排列 */
+}
+
+    .subgenre-links a {
+        width: 150px; /* 固定宽度的项目 */
+        text-align: center; /* 链接文本居中 */
+        white-space: nowrap; /* 防止文本换行 */
+    }
+
+
+.product-purchase {
+    margin-top:100px;
+}
+.navbar {
+    font-family: Arial, sans-serif;
+    padding: 1rem 2rem;
+    width: 100%;
+    transition: all 0.5s ease-in-out; /* Smooth transition */
+    background-color: rgba(255, 255, 255, 0); /* Initial transparent background */
+    position: fixed; /* Make the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+    .navbar.scrolled {
+        background-color: #ffffff; /* Change to opaque */
+        padding: 0.5rem 1rem;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
+    }
+
+/* Other styles */
+.navbar-brand img {
+    height: 80px; /* Increased size initially */
+    transition: height 0.5s ease-in-out, filter 0.5s ease-in-out; /* Smooth transition */
+    filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.9)); /* Add glowing effect */
+}
+
+.navbar.scrolled .navbar-brand img {
+    height: 60px; /* Smaller size after scroll */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* Reduce glowing effect */
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: black; /* Initial color */
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 26px; /* Larger font size initially */
+    transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7);
+}
+
+    .navbar-nav .nav-item .nav-link:hover {
+        font-size: 30px; /* Increase font size on hover */
+        color: green; /* Change font color to green on hover */
+    }
+
+.navbar.scrolled .navbar-nav .nav-item .nav-link {
+    font-size: 20px; /* Smaller font size after scroll */
+}
+
+    .navbar.scrolled .navbar-nav .nav-item .nav-link:hover {
+        font-size: 24px; /* Increase font size on hover when scrolled */
+    }
+
+.navbar-nav .nav-item:last-child {
+    margin-left: auto;
+}
+
+.text {
+    font-size: 24px;
+    transition: font-size 0.5s ease-in-out; /* Smooth transition for text size */
+}
+
+    .text p {
+        margin: 0;
+        white-space: pre-line;
+        text-align: left;
+    }
+
+.navbar.scrolled .text {
+    font-size: 20px; /* Smaller font size after scroll */
+    color: #333; /* Change text color when scrolled */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    margin-top: -8px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.nav-item.dropdown:hover .dropdown-menu,
+.nav-item.dropdown:focus-within .dropdown-menu {
+    display: block;
+}
+
+.dropdown-logout {
+    text-align: center;
+    color: red !important; /* Change to your desired color */
+}
+
+.card-custom {
+    background-color: thistle;
+    min-height: 300px; /* Minimum height */
+    min-width: 250px; /* Minimum width */
+    margin: auto; /* Center the card */
+    margin-bottom: 30px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Center align items vertically */
+}
+
+.card-img-custom {
+    width: 60px; /* Fixed width */
+    height: 60px; /* Fixed height */
+    object-fit: contain; /* Maintain image ratio */
+}
+
+.card-img-custom-large {
+    width: 120px; /* Larger fixed width */
+    height: 120px; /* Larger fixed height */
+    object-fit: contain; /* Maintain image ratio */
+}
+
+.card img {
+    margin-bottom: 15px;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+}
+
+
+
+
+.footer_new {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(248, 249, 250, 1);
+    padding: 2rem 0;
+    margin-top: auto; /* 将 footer 推到页面底部 */
+    font-size:18px;
+}

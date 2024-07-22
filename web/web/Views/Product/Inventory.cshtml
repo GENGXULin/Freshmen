@@ -1,0 +1,100 @@
+﻿@model List<web.Models.Product>
+@{
+    ViewData["Title"] = "Product Inventory";
+}
+
+
+<div class="nav-bg"></div>
+
+<form method="get" asp-action="Inventory">
+    <div class="product-inventory">
+        <h1>Product List</h1>
+        <div class="genre-navigation">
+            <strong>Genre:</strong>
+            <a href="@Url.Action("Inventory", new { genreId = (int?)null, subGenreId = (int?)null })" class="@(ViewBag.SelectedGenreId == null ? "selected" : "link")">All</a>
+            @if (ViewBag.Genres != null)
+            {
+                @foreach (var genre in ViewBag.Genres)
+                {
+                    <a href="@Url.Action("Inventory", new { genreId = genre.Value, subGenreId = (int?)null })" class="@(ViewBag.SelectedGenreId == genre.Value ? "selected" : "link")">@genre.Text</a>
+                }
+            }
+        </div>
+
+        <div class="subgenre-navigation">
+            <strong>SubGenre:</strong>
+            <div class="subgenre-links">
+                <a href="@Url.Action("Inventory", new { genreId = ViewBag.SelectedGenreId, subGenreId = (int?)null })" class="@(ViewBag.SelectedSubGenreId == null ? "selected" : "link")">All</a>
+                @if (ViewBag.SubGenres != null)
+                {
+                    @foreach (var subGenre in ViewBag.SubGenres)
+                    {
+                        <a href="@Url.Action("Inventory", new { genreId = ViewBag.SelectedGenreId, subGenreId = subGenre.Value })" class="@(ViewBag.SelectedSubGenreId == subGenre.Value ? "selected" : "link")">@subGenre.Text</a>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Genre</th>
+            <th>SubGenre</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            @if (!User.IsInRole("User"))
+            {
+                <th>Published</th>
+                <th>LastUpdatedBy</th>
+                <th>LastUpdated</th>
+            }
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Author</td>
+                <td>@product.Description</td>
+                <td>@product.GenreNavigation?.Name</td>
+                <td>@product.subGenreNavigation?.Name</td>
+                <td>$@product.Price</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@product.Quantity</td>
+                @if (!User.IsInRole("User"))
+                {
+                    <td>@product.Published?.ToString("yyyy-MM-dd")</td>
+                    <td>@product.LastUpdatedBy</td>
+                    <td>@product.LastUpdated?.ToString("yyyy-MM-dd")</td>
+                }
+                <td>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <a asp-controller="Product" asp-action="CreateEdit" asp-route-id="@product.ID" class="btn btn-primary">Edit</a>
+                    }
+                    else if (User.IsInRole("User"))
+                    {
+                        <a asp-controller="Product" asp-action="Purchase" asp-route-id="@product.ID" class="btn btn-success">Buy</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Account" asp-action="Login" class="btn btn-success">Buy</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (User.IsInRole("Admin"))
+{
+    <div>
+        <a asp-controller="Product" asp-action="CreateEdit" class="btn btn-success">Create New</a>
+    </div>
+}
