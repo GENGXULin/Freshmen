@@ -34,7 +34,7 @@
     font-weight: bold;
     margin-left: 20px;
     margin-right: 20px;
-    font-size: 20px; /* Larger font size initially */
+    font-size: 26px; /* Larger font size initially */
     transition: all 0.5s ease-in-out; /* Smooth transition for all properties */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(255, 255, 255, 0.7);
 }

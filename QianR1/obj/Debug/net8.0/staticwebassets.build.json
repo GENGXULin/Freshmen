@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "rRQT/joEvuIHkBLS0aFdLagz5ueruVpnolg2dsPgxBo=",
+  "Hash": "iLPDmWtrS+LxCtmFhVpRs1SnHO6+317O5tiAHNfJBbI=",
   "Source": "COMP3851B",
   "BasePath": "_content/COMP3851B",
   "Mode": "Default",
@@ -528,25 +528,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\image 40.png"
-    },
-    {
-      "Identity": "E:\\COMP381B\\QianR1\\wwwroot\\images\\JTVC.png",
-      "SourceId": "COMP3851B",
-      "SourceType": "Discovered",
-      "ContentRoot": "E:\\COMP381B\\QianR1\\wwwroot\\",
-      "BasePath": "_content/COMP3851B",
-      "RelativePath": "images/JTVC.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\JTVC.png"
     },
     {
       "Identity": "E:\\COMP381B\\QianR1\\wwwroot\\images\\justIco.png",

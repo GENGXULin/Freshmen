@@ -37,7 +37,6 @@
     display: flex;
     align-items: center;
     z-index: 1;
-   
 }
 
 .overlay-text2 {
@@ -65,7 +64,7 @@
 
 .overlay-text2 .line1 {
     color: white;
-    font-size: 7rem;
+    font-size: 8rem;
     font-weight: bold;
     position: relative; /* 使 top 和 left 属性有效 */
     top: -120px; /* 向上移动的距离，可以根据需要调整 */
@@ -76,7 +75,7 @@
 
 .overlay-text2 .line2 {
     font-family:Arial;
-    font-size: 22px;
+    font-size: 30px;
     position: relative; /* 使 top 和 left 属性有效 */
     left: 180px;
     font-weight: bold;
@@ -107,8 +106,6 @@
 .overlay-text .line3 {
     font-size: 3rem;
     font-weight: bold;
-    white-space: nowrap;
-
 }
 
 .content-container {

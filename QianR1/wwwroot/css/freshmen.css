@@ -6,108 +6,6 @@
     flex-direction: column;
 }
 
-
-.indent {
-    margin-left: 60px; /* Fixed pixel value for indentation */
-}
-
-.indent2 {
-    margin-left: 20px; /* Fixed pixel value for indentation */
-    
-}
-
-.italic {
-    font-style: italic; /* 这是斜体的样式 */
-}
-
-.TDL_title2{
-    margin-top: 8%;
-
-}
-
-
-.TDL_title3 {
-    margin-top: 8%;
-}
-
-    .TDL_title1 h2, .TDL_title2 h2, .TDL_title3 h2 {
-        margin-top: 2%;
-        font-size: 20px;
-        font-weight: bold;
-        color: #333; /* 更深的颜色 */
-        text-decoration: underline; /* 添加下划线 */
-    }
-
-
-.TDL_title1 h3, .TDL_title2 h3, .TDL_title3 h3 {
-    margin-top: 3%;
-    font-size: 16px;
-}
-
-.TDL_title1 p, .TDL_title2 p, .TDL_title3 p {
-    font-size: 12px; /* 基础字体大小 */
-    margin-top: 1%;
-}
-
-    .TDL_title3 p em {
-        font-size: 12px; /* 基础字体大小 */
-    }
-
-    .TDL_title1 ul, .TDL_title2 ul, .TDL_title3 ul {
-        font-size: 12px; /* 比 p 更小的字体大小 */
-        margin-top: 1%;
-    }
-
-    .TDL_title1 ul li, .TDL_title3 ul li {
-        font-size: 12px; /* 比 ul 更小的字体大小 */
-        margin-top: 1%;
-    }
-
-    .TDL_title2 ol li {
-        font-size: 12px; /* 比 ul 更小的字体大小 */
-        margin-bottom: 40px;
-    }
-
-    .TDL_title2 ol{
-        font-size: 12px; /* 比 ul 更小的字体大小 */
-        margin-top: 25px;
-    }
-
-.JTVC-MAP{
-    text-align: center; /* 使图片和文字居中对齐 */
-    margin-top: 20px; /* 在内容下方添加一些空间 */
-}
-
-    .JTVC-MAP img {
-        max-width: 100%; /* 确保图片在容器内自适应宽度 */
-        height: auto; /* 维持图片的宽高比 */
-    }
-
-    .JTVC-MAP p {
-        font-size: 14px; /* 说明文字的字体大小 */
-        margin-top: 10px; /* 在图片和说明文字之间添加一些空间 */
-        font-style: italic; /* 说明文字的字体设置为斜体 */
-    }
-
-
-.vaccination-centres {
-    width: 100%;
-    border-collapse: collapse; /* 合并表格边框 */
-    margin-top: 20px; /* 表格上方的间距 */
-}
-
-    .vaccination-centres th, .vaccination-centres td {
-        border: 1px solid #ddd; /* 表格单元格的边框 */
-        padding: 8px; /* 单元格的内边距 */
-        text-align: left; /* 文本左对齐 */
-    }
-
-    .vaccination-centres th {
-        background-color: #f2f2f2; /* 表头背景颜色 */
-        font-weight: bold; /* 表头字体加粗 */
-    }
-
-
 /* 固定的导航背景 */
 .nav-bg {
     height: 85px; /* 确保与导航栏高度一致 */
@@ -120,15 +18,12 @@
 }
 
 .breadcrumb {
-    display: flex;
-    justify-content: left; /* 使容器内的内容居中对齐 */
-    box-sizing: border-box;
-    padding: 0; /* 确保没有多余的内边距 */
-    margin: 0; /* 居中对齐 */
-    max-width: 100%;
-    margin-top: 3%;
-    margin-bottom: 1%;
-    margin-left: 2%;
+    font-size: 1.5em;
+    background-color: transparent; /* 使侧边栏透明 */
+    padding: 1.5em;
+    margin-left: 2%; /* 侧边栏与内容之间的间隔 */
+    margin-top: 30px;
+    width: 100%; /* 占满中间的比例 */
 }
 
     .breadcrumb a {
@@ -145,31 +40,28 @@
 /* 主容器，包含侧边栏和内容 */
 .container_new2 {
     display: flex;
+    justify-content: center; /* 使容器内的内容居中对齐 */
     box-sizing: border-box;
     padding: 0; /* 确保没有多余的内边距 */
-    margin: 0; /* 居中对齐 */
-    max-width: 100%;
+    margin: 0 auto; /* 居中对齐 */
+    width: 100%; /* 占满中间的比例 */
 }
 
 .content {
-    margin-left:-8%;
-    margin-top:1%;
     width: 100%; /* 占满容器的宽度 */
     max-width: 1200px; /* 限制最大宽度 */
     box-sizing: border-box;
-    margin-bottom:4%;
 }
 
 /* 侧边栏样式 */
 .sidebar {
-    justify-content: center;
     font-size: 1.5em;
     width: 20%; /* 侧边栏宽度 */
     background-color: transparent; /* 使侧边栏透明 */
     padding: 1.5em;
-    margin-right: 10%; /* 侧边栏与内容之间的间隔 */
+    margin-right: 8%; /* 侧边栏与内容之间的间隔 */
     box-sizing: border-box; /* 包括填充和边框在内的宽度计算 */
-    width: 20%; /* 占满中间的比例 */
+    width: 25%; /* 占满中间的比例 */
 }
 
     /* 侧边栏列表样式 */
@@ -206,7 +98,7 @@
                     left: 0;
                     width: 5px; /* 左侧边框宽度 */
                     height: 100%;
-                    background-color: orange; /* 左侧边框颜色 */
+                    background-color: #007bff; /* 左侧边框颜色 */
                     transition: height 0.3s;
                     height: 0;
                     border-radius: 10px 0 0 10px;
@@ -221,8 +113,9 @@
                 }
 
                 .sidebar ul li a.active {
+                    background-color: lightgray; /* 选中项的背景颜色 */
                     color: #000000; /* 选中项的文字颜色 */
-   
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8); /* 选中项的阴影效果 */
                 }
 
 
