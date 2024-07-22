@@ -9,119 +9,119 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = COMP3851B
 build_property.RootNamespace = COMP3851B
-build_property.ProjectDir = E:\COMP381B\QianR1\
+build_property.ProjectDir = E:\Freshmen\QianR1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\COMP381B\QianR1
+build_property.MSBuildProjectDirectory = E:\Freshmen\QianR1
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/COMP381B/QianR1/Views/Account/LogIn.cshtml]
+[E:/Freshmen/QianR1/Views/Account/LogIn.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dJbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Account/profile.cshtml]
+[E:/Freshmen/QianR1/Views/Account/profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxwcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/AdminPanel.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/AdminPanel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQWRtaW5QYW5lbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/AnnouncementsManagement.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/AnnouncementsManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQW5ub3VuY2VtZW50c01hbmFnZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/CreateAnnouncement.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/CreateAnnouncement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlQW5ub3VuY2VtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/CreateFAQ.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/CreateFAQ.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cQ3JlYXRlRkFRLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/EditAnnouncement.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/EditAnnouncement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEFubm91bmNlbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/EditFAQ.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/EditFAQ.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRWRpdEZBUS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/FAQsManagement.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/FAQsManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRkFRc01hbmFnZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/LogsManagement.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/LogsManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cTG9nc01hbmFnZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Admin/UserManagement.cshtml]
+[E:/Freshmen/QianR1/Views/Admin/UserManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXNlck1hbmFnZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Dates/dates.cshtml]
+[E:/Freshmen/QianR1/Views/Dates/dates.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGF0ZXNcZGF0ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Freshmen/Index.cshtml]
+[E:/Freshmen/QianR1/Views/Freshmen/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRnJlc2htZW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Home/Announcement.cshtml]
+[E:/Freshmen/QianR1/Views/Home/Announcement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBbm5vdW5jZW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Home/DocumentsNeeded.cshtml]
+[E:/Freshmen/QianR1/Views/Home/DocumentsNeeded.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2N1bWVudHNOZWVkZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Home/FAQs.cshtml]
+[E:/Freshmen/QianR1/Views/Home/FAQs.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGQVFzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Home/Guide.cshtml]
+[E:/Freshmen/QianR1/Views/Home/Guide.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHdWlkZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Home/Index.cshtml]
+[E:/Freshmen/QianR1/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Home/location.cshtml]
+[E:/Freshmen/QianR1/Views/Home/location.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxsb2NhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Home/Privacy.cshtml]
+[E:/Freshmen/QianR1/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Shared/Error.cshtml]
+[E:/Freshmen/QianR1/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Shared/_ValidationScriptsPartial.cshtml]
+[E:/Freshmen/QianR1/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Tour/Index.cshtml]
+[E:/Freshmen/QianR1/Views/Tour/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG91clxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/User/Register.cshtml]
+[E:/Freshmen/QianR1/Views/User/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/_ViewImports.cshtml]
+[E:/Freshmen/QianR1/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/_ViewStart.cshtml]
+[E:/Freshmen/QianR1/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/COMP381B/QianR1/Views/Shared/_Layout.cshtml]
+[E:/Freshmen/QianR1/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-x2btt1o21n

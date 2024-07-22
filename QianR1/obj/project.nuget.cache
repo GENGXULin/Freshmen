@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QpoI+IsoCCDcMJPn5+2qB5FGX7v1WqYzU/6UXUe+yvyT7pFSChimgA5FuJdU2i6HXa9VMfWBjGcQEVNt4UbBKw==",
+  "dgSpecHash": "ajhLqByZopiG6HFqtWA+OCcriMJ0I4A7GK1EDxUSSuYL1HlPaDzbRJXY70bvvqQeow3pPjXUiguHhNzBoKoa3A==",
   "success": true,
-  "projectFilePath": "E:\\COMP381B\\QianR1\\COMP3851B.csproj",
+  "projectFilePath": "E:\\Freshmen\\QianR1\\COMP3851B.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LEO\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\LEO\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
